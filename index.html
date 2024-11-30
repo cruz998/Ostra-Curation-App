@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curator Playlist</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Playlist Grid Container -->
+  <div class="grid-container">
+    
+    <!-- Container for Two-Column Layout (One Playlist Card) -->
+    <div class="container">
+      
+      <!-- Left Column: Cover Art and TIDAL Player -->
+      <div class="left-column">
+        <iframe src="https://embed.tidal.com/tracks/321414299" width="300" height="80" allow="encrypted-media" sandbox="allow-same-origin allow-scripts allow-forms allow-popups" title="TIDAL Embed Player"></iframe>
+        <img src="images/Bad-Bunny.webp" alt="Cover Art">
+      </div>
+      
+      <!-- Right Column: Playlist Info and Comments Section -->
+      <div class="right-column">
+        <h2>Jangeo Mix</h2>
+        <p>achoooooo mami</p>
+        <p>Curated by Satoshi Lopez</p>
+        <p>22,528 likes • 27h 38m</p>
+
+        <!-- Send Sats Button -->
+        <button class="send-sats-btn" id="sendSatsButton">Send Sats 💸</button>
+
+        <!-- Comment Section -->
+        <div class="comment-section">
+          <h3>No comments yet</h3>
+          <textarea placeholder="Add a comment"></textarea>
+          <button>Post Comment</button>
+        </div>
+      </div>
+      
+    </div> <!-- End of one playlist card -->
+    
+  </div> <!-- End of grid container -->
+
+  <!-- Link to the JavaScript file -->
+  <script src="js/scripts.js"></script>
+</body>
+</html>

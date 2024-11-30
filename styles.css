@@ -1,0 +1,145 @@
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Playlist Container (Centered) */
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 80%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Left Side - Embedded Player with Cover Art */
+.left-column {
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #121212; /* TIDAL black background */
+  border-radius: 10px 0 0 10px;
+}
+
+.left-column img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.left-column iframe {
+  width: 300px;
+  height: 80px;
+  border-radius: 0 0 10px 10px;
+  margin-top: -5px; /* To keep player tightly aligned with cover */
+}
+
+/* Right Side - Playlist Info and Comments */
+.right-column {
+  flex: 2;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Styling for Playlist Info */
+.right-column h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.right-column p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+/* Send Sats Button Styling */
+.send-sats-btn {
+  background-color: #ffac33; /* Bright orange for visibility */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.send-sats-btn:hover {
+  background-color: #e6952c; /* Slightly darker shade on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.send-sats-btn:active {
+  transform: translateY(0); /* Reset lift effect when clicked */
+}
+
+/* Comment Section */
+.comment-section {
+  margin-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+}
+
+.comment-section textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.comment-section button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.comment-section button:hover {
+  background-color: #e55340;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .left-column, .right-column {
+      width: 100%;
+  }
+
+  .left-column iframe {
+      height: 80px;
+  }
+
+  .left-column img {
+      width: 100%;
+      height: auto;
+  }
+}
