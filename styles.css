@@ -5,10 +5,173 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
+
+/* ============================= */
+/* Sidebar Styles */
+/* ============================= */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar .profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.sidebar .profile h3 {
+  font-size: 18px;
+  color: #fff;
+  margin: 0;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar-nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-nav ul li a.active,
+.sidebar-nav ul li a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.collection {
+  margin-top: 30px;
+}
+
+.collection h4 {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.collection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.collection ul li {
+  margin: 10px 0;
+}
+
+.collection ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.collection ul li a:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* ============================= */
+/* Adjust Main Content for Sidebar */
+/* ============================= */
+.main-content {
+  margin-left: 250px; /* Account for sidebar width */
+  padding: 20px;
+}
+
+/* ============================= */
+/* Home Page Styles */
+/* ============================= */
+
+/* Home Grid Layout */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Crate Card Styling */
+.crate {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.crate:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.crate img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.crate h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.crate p {
+  font-size: 14px;
+  color: #777;
+}
+
+.crate button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0 20px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.crate button:hover {
+  background-color: #e55340;
+}
+
+/* ============================= */
+/* Crate Page Styles (Original) */
+/* ============================= */
 
 /* Playlist Container (Centered) */
 .container {
@@ -70,6 +233,7 @@ body {
   color: #555;
   margin-bottom: 20px;
 }
+
 /* Send Sats Button Styling */
 .send-sats-btn {
   background-color: #ffac33; /* Bright orange for visibility */
@@ -123,7 +287,9 @@ body {
   background-color: #e55340;
 }
 
+/* ============================= */
 /* Responsive Design */
+/* ============================= */
 @media (max-width: 768px) {
   .container {
       flex-direction: column;
@@ -141,5 +307,17 @@ body {
   .left-column img {
       width: 100%;
       height: auto;
+  }
+
+  .home-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller screens */
+  }
+
+  .sidebar {
+      width: 200px; /* Adjust sidebar width for smaller screens */
+  }
+
+  .main-content {
+      margin-left: 200px;
   }
 }
